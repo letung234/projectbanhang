@@ -1,0 +1,23 @@
+extends ../../layouts/default.pug
+
+block main
+  if(role.permissions.includes("products-category_view"))
+    if (product.title)
+      h1(class="mb-4") #{product.title}
+
+    if (product.parent_id !="")
+      div(class="mb-4") Danh muc cha : #{product.parent_title}
+
+    if (product.status)
+      div(class="mb-4")
+        span Trạng thái:
+        if (product.status === "active")
+          span(class="badge badge-success") Hoạt động
+        else
+          span(class="badge badge-danger") Dừng hoạt động
+
+    if (product.position)
+      div(class="mb-4") Vị trí: <b>#{product.position}</b>
+
+    if (product.description)
+      div(class="mb-4") !{product.description}

@@ -1,0 +1,8 @@
+extends ../../layouts/default.pug
+
+block main
+  if(role.permissions.includes("roles_view"))
+    if (roles.title)
+      h1(class="mb-4") #{roles.title}
+    if (roles.description)
+      div(class="mb-4") !{roles.description}

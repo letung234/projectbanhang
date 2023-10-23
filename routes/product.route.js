@@ -1,0 +1,11 @@
+const express = require('express')
+const route=express.Router()
+const controller=require("../controllers/client/product.controller")
+
+route.get('/', controller.index)
+route.get('/add',controller.add )
+route.get('/detail/:slugProduct',controller.detail)
+route.get("/:slugCategory", controller.category)
+
+
+module.exports=route
