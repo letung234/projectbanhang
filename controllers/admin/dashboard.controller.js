@@ -1,5 +1,6 @@
 module.exports.dashboard =(req,res) =>{
-    res.render("./admin/pages/dashboard/index",{
+    console.log("ok nhé bạn")
+    res.render('admin/pages/dashboard/index',{
         pageTitle :"Tong quan"
     })
 }
